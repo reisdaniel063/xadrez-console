@@ -4,7 +4,7 @@ using tabuleiro;
 
 namespace xadrez
 {
-    internal class Torre : Peca
+     class Torre : Peca
     {
         public Torre(Tabuleiro tabuleiro, Cor cor) : base(cor, tabuleiro)
         {
@@ -14,7 +14,7 @@ namespace xadrez
             return "T";
         }
 
-        public bool podeMover(Posicao pos)
+        private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);
             return p == null || p.cor != this.cor;
